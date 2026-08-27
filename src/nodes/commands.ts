@@ -1,4 +1,4 @@
-import { createListItemNode } from "./factories";
+import { createListItemNode, createTextNode } from "./factories";
 import { NODE_TYPES, type FindNodeResult, type RosetteNode } from "./types";
 import { deleteNodeById, findNodeById, getNodeAtPath, getParentPath, insertNodeAtPath, updateNodeById } from "./utils";
 
@@ -127,6 +127,12 @@ const insertAtText = (
         // add wrapped node with focused node into DOM in place
         updatedNodes = insertNodeAtPath(updatedNodes, wrapperNode, targetNodePath);
         return updatedNodes;
+    }
+    // leaf node (e.g. image) inserted at a top-level text node: insert it right
+    // after the target, followed by a fresh text node so typing can continue
+    else if (targetNodePath.length === 1 && !("nodes" in insertedNode)) {
+        const trailingTextNode = createTextNode();
+        return insertNodeAfter(nodes, targetNode.id, [insertedNode, trailingTextNode]);
     }
     else if (target.node.type === NODE_TYPES.TEXT && target.node.content === "" && target.nodePath.length > 1) {
         return nodes;

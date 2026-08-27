@@ -1,4 +1,4 @@
-import { NODE_TYPES, type ListItemNode, type OrderedListNode, type RosetteNode, type RosetteNodeOfType, type RosetteNodeType, type TextNode, type UnorderedListNode } from "./types";
+import { NODE_TYPES, type ImageNode, type ListItemNode, type OrderedListNode, type RosetteNode, type RosetteNodeOfType, type RosetteNodeType, type TextNode, type UnorderedListNode } from "./types";
 
 
 export const createOrderedListNode = (): OrderedListNode => ({
@@ -40,6 +40,16 @@ export const createTextNode = (content: string = "", style?: TextNode["style"]):
     tags: [],
     content,
     style
+})
+
+export const createImageNode = (src: string, opts?: { width?: number; height?: number; alt?: string }): ImageNode => ({
+    id: crypto.randomUUID(),
+    type: NODE_TYPES.IMAGE,
+    tags: [],
+    src,
+    width: opts?.width,
+    height: opts?.height,
+    alt: opts?.alt,
 })
 
 export const copyNode = <T extends RosetteNodeType>(node: RosetteNodeOfType<T>): RosetteNodeOfType<T> => {

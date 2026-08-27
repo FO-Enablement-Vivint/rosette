@@ -1,21 +1,31 @@
-import ToolbarButton from "../ToolbarButton";
+import ToolbarButton from "../toolbar/ToolbarButton";
+import ImageToolbarButton from "../toolbar/ImageToolbarButton";
 import { NODE_TYPES, type OrderedListNode, type RosetteNode, type TextNode, type UnorderedListNode } from "../../nodes/types";
 import { renderNode } from "../../nodes/renderNode";
 import { copyNodes, createListItemNode, createOrderedListNode, createTextNode, createUnorderedListNode } from "../../nodes/factories";
 import { deleteNodeById, findNodeById, findNodeOfType, getActiveElement, getActiveNode, getNodeAtPath, getNodeBefore, getParentPath, getSelectedNodes, updateNodeById } from "../../nodes/utils";
 import { EditorProvider, useEditor } from "../../providers/editor/EditorProvider";
 import { deleteNode, insertToolbarNode, insertNodeAfter, insertNodeBefore } from "../../nodes/commands";
+import type { ImageUploadHandler } from "../../nodes/imageUpload";
 import { useEffect, useRef, type ClipboardEvent, type KeyboardEvent } from "react";
 import "./editor.css";
+import ImageIcon from "../toolbar/icons/ImageIcon";
+import UnorderedListIcon from "../toolbar/icons/UnorderedListIcon";
+import OrderedListIcon from "../toolbar/icons/OrderedListIcon";
 
-interface EditorProps {
+interface EditorInnerProps {
+    className?: string; 
+    onImageUpload?: ImageUploadHandler; 
+    onImageUploadError?: (message: string) => void
+}
+
+interface EditorProps extends EditorInnerProps {
     defaultValue?: RosetteNode[];
     onChange?: (nodes: RosetteNode[]) => void;
-    className?: string;
 }
 
 
-const EditorInner = ({className}: {className?: string}) => {
+const EditorInner = ({className, onImageUpload, onImageUploadError}: EditorInnerProps) => {
     const {nodes, replaceNodes, focusNode} = useEditor();
     const editorRef = useRef<HTMLDivElement>(null);
 
@@ -38,7 +48,20 @@ const EditorInner = ({className}: {className?: string}) => {
         if (!targetToolbarNode) return;
 
         const newTextNode = findNodeOfType(targetToolbarNode.node, NODE_TYPES.TEXT);
-        if (newTextNode) focusNode(newTextNode.id, newTextNode.content.length);
+        if (newTextNode) {
+            focusNode(newTextNode.id, newTextNode.content.length);
+            return;
+        }
+
+        // Leaf nodes (e.g. images) have no children to search for a text node —
+        // focus the text node inserted immediately after it instead.
+        const {nodePath} = targetToolbarNode;
+        const parent = getNodeAtPath(updatedNodes, getParentPath(nodePath));
+        const siblings = parent?.nodes ?? updatedNodes;
+        const siblingAfter = siblings[nodePath[nodePath.length - 1] + 1];
+        if (siblingAfter?.type === NODE_TYPES.TEXT) {
+            focusNode(siblingAfter.id, siblingAfter.content.length);
+        }
     }
 
     const copyHandler = (e: ClipboardEvent<HTMLDivElement>) => {
@@ -436,6 +459,14 @@ const EditorInner = ({className}: {className?: string}) => {
                 const nodeBefore = getNodeBefore(nodes, node.id);
                 if (!nodeBefore?.node) return;
 
+                // Backspacing right after an image deletes the image itself.
+                if (nodeBefore.node.type === NODE_TYPES.IMAGE) {
+                    syncedNodes = deleteNode(nodes, nodeBefore.node.id);
+                    replaceNodes(syncedNodes);
+                    focusNode(node.id, 0);
+                    return;
+                }
+
                 const parentPath = getParentPath(nodePath);
                 const parent = getNodeAtPath(nodes, parentPath);
 
@@ -591,13 +622,17 @@ const EditorInner = ({className}: {className?: string}) => {
             {/** Toolbar */}
             <div className="flex bg-(--color-dark-slate) border-t border-white/10">
                 <ToolbarButton
-                    buttonText="OL"
-                    node={createOrderedListNode}
-                    onClick={toolbarHandler}
+                    buttonIcon={<UnorderedListIcon />}
+                    onClick={() => toolbarHandler(createUnorderedListNode())}
                 />
                 <ToolbarButton
-                    buttonText="UL"
-                    node={createUnorderedListNode}
+                    buttonIcon={<OrderedListIcon />}
+                    onClick={() => toolbarHandler(createOrderedListNode())}
+                />
+                <ImageToolbarButton
+                    buttonIcon={<ImageIcon />}
+                    onImageUpload={onImageUpload}
+                    onImageUploadError={onImageUploadError}
                     onClick={toolbarHandler}
                 />
             </div>
@@ -606,10 +641,10 @@ const EditorInner = ({className}: {className?: string}) => {
 }
 
 
-const Editor = ({defaultValue, className, onChange}: EditorProps) => {
+const Editor = ({defaultValue, className, onChange, onImageUpload, onImageUploadError}: EditorProps) => {
     return (
         <EditorProvider defaultValue={defaultValue} onChange={onChange}>
-            <EditorInner className={className} />
+            <EditorInner className={className} onImageUpload={onImageUpload} onImageUploadError={onImageUploadError} />
         </EditorProvider>
     )
 }

@@ -13,7 +13,12 @@ export {
     createListItemNode,
     createOrderedListNode,
     createUnorderedListNode,
+    createImageNode,
 } from "./nodes/factories";
+
+// image upload
+export { readImageAsDataUrl, MAX_IMAGE_UPLOAD_BYTES } from "./nodes/imageUpload";
+export type { ImageUploadHandler, ImageUploadResult } from "./nodes/imageUpload";
 
 // types
 export {NODE_TYPES} from "./nodes/types";
@@ -24,6 +29,7 @@ export type {
     ListItemNode,
     OrderedListNode,
     UnorderedListNode,
+    ImageNode,
     RosetteNodeType,
     RosetteNodeOfType
 } from "./nodes/types";

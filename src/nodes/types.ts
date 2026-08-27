@@ -4,6 +4,7 @@ export const NODE_TYPES = {
     UNORDERED_LIST: "unordered-list",
     LIST_ITEM: "list-item",
     TEXT: "text",
+    IMAGE: "image",
 } as const;
 
 export type RosetteNodeType = RosetteNode["type"];
@@ -35,12 +36,20 @@ export interface TextNode extends RosetteNodeBase<typeof NODE_TYPES.TEXT> {
     }
 }
 
+export interface ImageNode extends RosetteNodeBase<typeof NODE_TYPES.IMAGE> {
+    src: string;
+    width?: number;
+    height?: number;
+    alt?: string;
+}
+
 
 export type RosetteNode = 
     OrderedListNode |
     UnorderedListNode | 
     ListItemNode |
-    TextNode
+    TextNode |
+    ImageNode
 
 
 export interface FindNodeResult {

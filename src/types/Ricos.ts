@@ -25,11 +25,18 @@ export interface RicosNode {
         type: string;
     };
     imageData?: {
-        containerData: {},
+        containerData?: {
+            alignment?: string;
+            textWrap?: boolean;
+            width?: { size?: string };
+        },
         image: {
             src: {
                 id: string;
-            }
+            };
+            width?: number;
+            height?: number;
+            altText?: string;
         }
     }
 }

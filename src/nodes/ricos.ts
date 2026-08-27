@@ -1,6 +1,6 @@
 
 import type { RicosDocument, RicosNode } from "../types/Ricos";
-import { createListItemNode, createOrderedListNode, createTextNode, createUnorderedListNode } from "./factories";
+import { createImageNode, createListItemNode, createOrderedListNode, createTextNode, createUnorderedListNode } from "./factories";
 import type { RosetteNode } from "./types";
 
 export const convertFromRicosDocument = (doc: RicosDocument): RosetteNode[] => {
@@ -47,10 +47,15 @@ const convertFromRicosNode = (wixNode: RicosNode): RosetteNode | null => {
             node.nodes = [];
             break;
 
-        case "IMAGE":
-            let imageId: string = wixNode.imageData!.image.src.id;
-            node = createTextNode(`[Image: ${imageId}]`);
+        case "IMAGE": {
+            const image = wixNode.imageData!.image;
+            node = createImageNode(`https://static.wixstatic.com/media/${image.src.id}`, {
+                width: image.width,
+                height: image.height,
+                alt: image.altText,
+            });
             break;
+        }
 
         case "FILE":
             let fileName: string = wixNode.fileData!.name;

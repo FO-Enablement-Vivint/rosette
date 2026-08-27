@@ -1,3 +1,4 @@
+import ImageElement from "../components/ImageElement"
 import ListItem from "../components/ListItem"
 import OrderedList from "../components/OrderedList"
 import TextElement from "../components/TextElement"
@@ -30,6 +31,11 @@ export const renderNode = (node: RosetteNode) => {
         case NODE_TYPES.TEXT:
             return (
                 <TextElement node={node} key={node.id} />
+            )
+
+        case NODE_TYPES.IMAGE:
+            return (
+                <ImageElement node={node} key={node.id} />
             )
 
         default:
