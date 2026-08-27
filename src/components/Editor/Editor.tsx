@@ -7,7 +7,7 @@ import { deleteNodeById, findNodeById, findNodeOfType, getActiveElement, getActi
 import { EditorProvider, useEditor } from "../../providers/editor/EditorProvider";
 import { deleteNode, insertToolbarNode, insertNodeAfter, insertNodeBefore } from "../../nodes/commands";
 import type { ImageUploadHandler } from "../../nodes/imageUpload";
-import { useEffect, useRef, type ClipboardEvent, type KeyboardEvent } from "react";
+import { useEffect, useRef, type ClipboardEvent, type KeyboardEvent, type MouseEvent } from "react";
 import "./editor.css";
 import ImageIcon from "../toolbar/icons/ImageIcon";
 import UnorderedListIcon from "../toolbar/icons/UnorderedListIcon";
@@ -37,6 +37,31 @@ const EditorInner = ({className, onImageUpload, onImageUploadError}: EditorInner
 
         return () => {el.removeEventListener("beforeinput", beforeInputHandler)}
     }, [nodes])
+
+    const deleteImageHandler = (nodeId: string) => {
+        const nodeBefore = getNodeBefore(nodes, nodeId);
+        const updatedNodes = deleteNode(nodes, nodeId);
+        replaceNodes(updatedNodes);
+
+        if (nodeBefore?.node) {
+            const offset = "content" in nodeBefore.node ? nodeBefore.node.content.length : 0;
+            focusNode(nodeBefore.node.id, offset);
+        }
+    }
+
+    // Delegated click handler: image delete buttons don't carry their own
+    // node-mutation logic (renderNode/ImageElement stay presentational so
+    // they're safe to reuse in the server-only formatRosetteToHtml path).
+    const clickHandler = (e: MouseEvent<HTMLDivElement>) => {
+        const deleteButton = (e.target as HTMLElement).closest('[data-action="delete-image"]');
+        if (!deleteButton) return;
+
+        const imageElement = deleteButton.closest<HTMLElement>("[data-node-id]");
+        const nodeId = imageElement?.dataset.nodeId;
+        if (!nodeId) return;
+
+        deleteImageHandler(nodeId);
+    }
 
     const toolbarHandler = (node: RosetteNode) => {
         const element = getActiveElement();
@@ -616,6 +641,7 @@ const EditorInner = ({className, onImageUpload, onImageUploadError}: EditorInner
             onKeyDown={keyDownHandler}
             onCopy={copyHandler}
             onPaste={pasteHandler}
+            onClick={clickHandler}
             >
                 {nodes.map((n: RosetteNode) => renderNode(n))}
             </div>
