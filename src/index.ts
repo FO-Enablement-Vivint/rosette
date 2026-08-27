@@ -2,6 +2,7 @@
 
 // editor
 export {default as Editor} from "./components/Editor/Editor";
+export type {EditorConfig} from "./config";
 
 // utils
 export {renderNode} from "./nodes/renderNode";
@@ -17,7 +18,7 @@ export {
 } from "./nodes/factories";
 
 // image upload
-export { readImageAsDataUrl, MAX_IMAGE_UPLOAD_BYTES } from "./nodes/imageUpload";
+export { readImageAsDataUrl } from "./nodes/imageUpload";
 export type { ImageUploadHandler, ImageUploadResult } from "./nodes/imageUpload";
 
 // types

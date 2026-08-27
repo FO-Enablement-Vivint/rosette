@@ -7,8 +7,8 @@ export interface ImageUploadResult {
 
 export type ImageUploadHandler = (file: File) => Promise<ImageUploadResult>;
 
-/** Wix Studio's max upload size for a single media file. */
-export const MAX_IMAGE_UPLOAD_BYTES = 50 * 1024 * 1024;
+/** Default max upload size (in bytes) for images inserted via the toolbar, unless overridden via EditorConfig.maxFileSize. */
+export const DEFAULT_MAX_FILE_SIZE = 1024 * 1024 * 10;
 
 /**
  * Default fallback used when no onImageUpload handler is provided. Reads the

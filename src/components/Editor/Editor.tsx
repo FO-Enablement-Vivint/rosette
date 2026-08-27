@@ -7,6 +7,8 @@ import { deleteNodeById, findNodeById, findNodeOfType, getActiveElement, getActi
 import { EditorProvider, useEditor } from "../../providers/editor/EditorProvider";
 import { deleteNode, insertToolbarNode, insertNodeAfter, insertNodeBefore } from "../../nodes/commands";
 import type { ImageUploadHandler } from "../../nodes/imageUpload";
+import { DEFAULT_MAX_FILE_SIZE } from "../../nodes/imageUpload";
+import type { EditorConfig } from "../../config";
 import { useEffect, useRef, type ClipboardEvent, type KeyboardEvent, type MouseEvent } from "react";
 import "./editor.css";
 import ImageIcon from "../toolbar/icons/ImageIcon";
@@ -16,7 +18,8 @@ import OrderedListIcon from "../toolbar/icons/OrderedListIcon";
 interface EditorInnerProps {
     className?: string; 
     onImageUpload?: ImageUploadHandler; 
-    onImageUploadError?: (message: string) => void
+    onImageUploadError?: (message: string) => void;
+    config?: EditorConfig;
 }
 
 interface EditorProps extends EditorInnerProps {
@@ -25,9 +28,13 @@ interface EditorProps extends EditorInnerProps {
 }
 
 
-const EditorInner = ({className, onImageUpload, onImageUploadError}: EditorInnerProps) => {
+const EditorInner = ({className, onImageUpload, onImageUploadError, config}: EditorInnerProps) => {
     const {nodes, replaceNodes, focusNode} = useEditor();
     const editorRef = useRef<HTMLDivElement>(null);
+
+    // Rosette never talks to Wix directly (that's the host app's onImageUpload
+    // callback), so it has no business enforcing Wix's upload limits here.
+    const maxFileSize = config?.maxFileSize ?? DEFAULT_MAX_FILE_SIZE;
 
     useEffect(() => {
         const el = editorRef.current;
@@ -660,6 +667,7 @@ const EditorInner = ({className, onImageUpload, onImageUploadError}: EditorInner
                     onImageUpload={onImageUpload}
                     onImageUploadError={onImageUploadError}
                     onClick={toolbarHandler}
+                    maxFileSize={maxFileSize}
                 />
             </div>
         </div>
@@ -667,10 +675,10 @@ const EditorInner = ({className, onImageUpload, onImageUploadError}: EditorInner
 }
 
 
-const Editor = ({defaultValue, className, onChange, onImageUpload, onImageUploadError}: EditorProps) => {
+const Editor = ({defaultValue, className, onChange, onImageUpload, onImageUploadError, config}: EditorProps) => {
     return (
         <EditorProvider defaultValue={defaultValue} onChange={onChange}>
-            <EditorInner className={className} onImageUpload={onImageUpload} onImageUploadError={onImageUploadError} />
+            <EditorInner className={className} onImageUpload={onImageUpload} onImageUploadError={onImageUploadError} config={config} />
         </EditorProvider>
     )
 }
