@@ -5,13 +5,15 @@ interface IImageElement {
 }
 
 const ImageElement = ({node}: IImageElement) => {
+    const isDeleted = node.tags?.includes("diff-del");
+
     return (
         <div data-node-id={node.id}
              data-node-type={node.type}
              contentEditable={false}
              className="relative w-full my-1 group"
         >
-            <img src={node.src} width={node.width} height={node.height} alt={node.alt || ""} className="max-w-full" />
+            <img src={node.src} width={node.width} height={node.height} alt={node.alt || ""} className="max-w-full" style={{opacity: isDeleted ? 0.5 : 1}} />
             <button
                 type="button"
                 data-action="delete-image"
