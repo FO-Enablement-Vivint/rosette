@@ -14,7 +14,7 @@ const ImageElement = ({node}: IImageElement) => {
              contentEditable={false}
              className="relative w-full my-1 group"
         >
-            <img src={node.src} width={node.width} height={node.height} alt={node.alt || ""} className={`max-w-full ${isAdded ? "border border-green" : ""}`} style={{opacity: isDeleted ? 0.5 : 1}} />
+            <img src={node.src} width={node.width} height={node.height} alt={node.alt || ""} className={`max-w-full ${isAdded ? "border border-green" : ""} ${isDeleted ? "border border-pink" : ""}`} style={{opacity: isDeleted ? 0.5 : 1}} />
             <button
                 type="button"
                 data-action="delete-image"
