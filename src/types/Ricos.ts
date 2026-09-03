@@ -14,6 +14,7 @@ export interface RicosNode {
         decorations: any[],
         text: string;
     };
+    collapsibleListData?: any;
     fileData?: {
         name: string;
         size: number;

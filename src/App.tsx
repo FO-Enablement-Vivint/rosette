@@ -2,11 +2,11 @@ import './App.css'
 import Editor from './components/Editor/Editor'
 import Panel from './components/Panel'
 import { convertFromRicosDocument } from './nodes/ricos'
-import { TEST_RICOS_CONTENT } from './tests/ricos-sample'
+import { DOORBELL_CAMERA_PRO_GEN_1 } from './tests/ricos-sample'
 
 function App() {
 
-  const defaultValue = convertFromRicosDocument(TEST_RICOS_CONTENT)
+  const defaultValue = convertFromRicosDocument(DOORBELL_CAMERA_PRO_GEN_1)
 
   return (
     <div className='flex flex-col items-center w-full h-screen justify-center'>

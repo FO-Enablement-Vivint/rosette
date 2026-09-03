@@ -7,15 +7,15 @@ export const convertFromRicosDocument = (doc: RicosDocument): RosetteNode[] => {
     var nodes: RosetteNode[] = [];
 
     for (const wixNode of doc.nodes) {
-        const node = convertFromRicosNode(wixNode);
-        if (node) nodes.push(node);
+        const childNodes = convertFromRicosNode(wixNode);
+        nodes.push(...childNodes);
     }
 
     return nodes.flat();
 }
 
-const convertFromRicosNode = (wixNode: RicosNode): RosetteNode | null => {
-    var node: RosetteNode | null = null;
+const convertFromRicosNode = (wixNode: RicosNode): RosetteNode[] => {
+    var nodes: RosetteNode[] = [];
 
     var childTextList: string[] = []; // used for any wix nodes that we "skip"
     switch (wixNode.type) {
@@ -24,42 +24,60 @@ const convertFromRicosNode = (wixNode: RicosNode): RosetteNode | null => {
                 if (childNode.textData) childTextList.push(childNode.textData.text);
             });
 
-            node = createTextNode(childTextList.join(" "));
-            return node; // escape, no need to search the children again;
-
+            nodes.push(createTextNode(childTextList.join(" ")));
+            return nodes; // escape, no need to search the children again;
+        
         case "TEXT": 
-            if (wixNode.textData) node = createTextNode(wixNode.textData.text);
+            if (wixNode.textData) nodes.push(createTextNode(wixNode.textData.text));
             break;
 
-
+        
+        case "COLLAPSIBLE_ITEM_BODY":
+        case "COLLAPSIBLE_ITEM_TITLE":
+            foreachRicosNodeChild(wixNode, (wixChildNode: RicosNode) => {
+                const childNode = convertFromRicosNode(wixChildNode);
+                nodes.push(...childNode);
+            });
+            return nodes; // escape, no need to search the children again;
+        
+        
+        case "COLLAPSIBLE_LIST":
         case "BULLETED_LIST":
-            node = createUnorderedListNode();
-            node.nodes = [];
+            let unorderedListNode = createUnorderedListNode();
+            unorderedListNode.nodes = [];
+            nodes.push(unorderedListNode);
             break;
 
         case "ORDERED_LIST":
-            node = createOrderedListNode();
-            node.nodes = [];
+            let orderedListNode = createOrderedListNode();
+            orderedListNode.nodes = [];
+            nodes.push(orderedListNode);
             break;
 
+        
         case "LIST_ITEM":
-            node = createListItemNode();
-            node.nodes = [];
+        case "COLLAPSIBLE_ITEM":
+            const listItemNode = createListItemNode();
+            listItemNode.nodes = [];
+            nodes.push(listItemNode);
             break;
-
+        
         case "IMAGE": {
             const image = wixNode.imageData!.image;
-            node = createImageNode(`https://static.wixstatic.com/media/${image.src.id}`, {
+            const imageNode = createImageNode(`https://static.wixstatic.com/media/${image.src.id}`, {
                 width: image.width,
                 height: image.height,
                 alt: image.altText,
             });
+
+            nodes.push(imageNode);
             break;
         }
 
         case "FILE":
             let fileName: string = wixNode.fileData!.name;
-            node = createTextNode(`[File: ${fileName}]`);
+            const fileNode = createTextNode(`[File: ${fileName}]`);
+            nodes.push(fileNode);
             break;
 
         default:
@@ -67,24 +85,21 @@ const convertFromRicosNode = (wixNode: RicosNode): RosetteNode | null => {
                 if (childNode.textData) childTextList.push(childNode.textData.text);
             });
 
-            node = createTextNode(childTextList.join(" "));
-            return node; // escape, no need to search the children again;
+            const textNode = createTextNode(childTextList.join(" "));
+            nodes.push(textNode);
+            return nodes; // escape, no need to search the children again;
     }
 
-    if (!node) return null;
+    if (nodes.length === 0) return nodes
 
-    if (!node.nodes) return node;
+    foreachRicosNodeChild(wixNode, (wixNodeChild: RicosNode) => {
+        const nodeChild = convertFromRicosNode(wixNodeChild);
+        if (!nodeChild) return;
 
-    if (wixNode.nodes.length > 0) {
-        for (const wixNodeChild of wixNode.nodes) {
-            const nodeChild = convertFromRicosNode(wixNodeChild);
-            if (!nodeChild) continue;
+        nodes[nodes.length - 1].nodes?.push(...nodeChild);
+    })
 
-            node.nodes?.push(nodeChild);
-        }
-    }
-
-    return node;
+    return nodes;
 }
 
 

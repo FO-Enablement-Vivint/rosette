@@ -1262,3 +1262,1333 @@ export const TEST_RICOS_CONTENT = {
         }
     ]
 }
+
+
+export const DOORBELL_CAMERA_PRO_GEN_1 = {
+    "documentStyle": {},
+    "nodes": [
+        {
+            "collapsibleListData": {
+                "containerData": {
+                    "alignment": "CENTER",
+                    "textWrap": true
+                },
+                "direction": "LTR",
+                "initialExpandedItems": "NONE"
+            },
+            "id": "6oxxv12203",
+            "nodes": [
+                {
+                    "id": "7pi4012204",
+                    "nodes": [
+                        {
+                            "id": "fiu9u12205",
+                            "nodes": [
+                                {
+                                    "headingData": {
+                                        "level": 5,
+                                        "textStyle": {
+                                            "textAlignment": "AUTO"
+                                        }
+                                    },
+                                    "id": "fda5e12206",
+                                    "nodes": [
+                                        {
+                                            "id": "",
+                                            "nodes": [],
+                                            "textData": {
+                                                "decorations": [],
+                                                "text": "Best Practices"
+                                            },
+                                            "type": "TEXT"
+                                        }
+                                    ],
+                                    "type": "HEADING"
+                                }
+                            ],
+                            "type": "COLLAPSIBLE_ITEM_TITLE"
+                        },
+                        {
+                            "id": "f39ms12207",
+                            "nodes": [
+                                {
+                                    "id": "ynxcj12148",
+                                    "nodes": [
+                                        {
+                                            "id": "kx2k812182",
+                                            "nodes": [
+                                                {
+                                                    "id": "iwu6j12183",
+                                                    "nodes": [
+                                                        {
+                                                            "id": "",
+                                                            "nodes": [],
+                                                            "textData": {
+                                                                "decorations": [
+                                                                    {
+                                                                        "fontWeightValue": 700,
+                                                                        "type": "BOLD"
+                                                                    }
+                                                                ],
+                                                                "text": "ALWAYS"
+                                                            },
+                                                            "type": "TEXT"
+                                                        },
+                                                        {
+                                                            "id": "",
+                                                            "nodes": [],
+                                                            "textData": {
+                                                                "decorations": [],
+                                                                "text": " run the DBC power test after installation"
+                                                            },
+                                                            "type": "TEXT"
+                                                        }
+                                                    ],
+                                                    "paragraphData": {
+                                                        "textStyle": {
+                                                            "textAlignment": "AUTO"
+                                                        }
+                                                    },
+                                                    "type": "PARAGRAPH"
+                                                }
+                                            ],
+                                            "type": "LIST_ITEM"
+                                        },
+                                        {
+                                            "id": "8rt5b12151",
+                                            "nodes": [
+                                                {
+                                                    "id": "nyq4f12134",
+                                                    "nodes": [
+                                                        {
+                                                            "id": "",
+                                                            "nodes": [],
+                                                            "textData": {
+                                                                "decorations": [],
+                                                                "text": "Do not place the camera with the lens facing down"
+                                                            },
+                                                            "type": "TEXT"
+                                                        }
+                                                    ],
+                                                    "paragraphData": {
+                                                        "textStyle": {
+                                                            "textAlignment": "AUTO"
+                                                        }
+                                                    },
+                                                    "type": "PARAGRAPH"
+                                                }
+                                            ],
+                                            "type": "LIST_ITEM"
+                                        },
+                                        {
+                                            "id": "8vyo112153",
+                                            "nodes": [
+                                                {
+                                                    "id": "c2nk612136",
+                                                    "nodes": [
+                                                        {
+                                                            "id": "",
+                                                            "nodes": [],
+                                                            "textData": {
+                                                                "decorations": [],
+                                                                "text": "Remove the protective film on the inside of the DBC only at time of the install"
+                                                            },
+                                                            "type": "TEXT"
+                                                        }
+                                                    ],
+                                                    "paragraphData": {
+                                                        "textStyle": {
+                                                            "textAlignment": "AUTO"
+                                                        }
+                                                    },
+                                                    "type": "PARAGRAPH"
+                                                }
+                                            ],
+                                            "type": "LIST_ITEM"
+                                        },
+                                        {
+                                            "id": "e98u712155",
+                                            "nodes": [
+                                                {
+                                                    "id": "grljn12138",
+                                                    "nodes": [
+                                                        {
+                                                            "id": "",
+                                                            "nodes": [],
+                                                            "textData": {
+                                                                "decorations": [],
+                                                                "text": "Leave product in packaging as long as possible. The DBC needs to stay protected"
+                                                            },
+                                                            "type": "TEXT"
+                                                        }
+                                                    ],
+                                                    "paragraphData": {
+                                                        "textStyle": {
+                                                            "textAlignment": "AUTO"
+                                                        }
+                                                    },
+                                                    "type": "PARAGRAPH"
+                                                }
+                                            ],
+                                            "type": "LIST_ITEM"
+                                        },
+                                        {
+                                            "id": "j8g4k12157",
+                                            "nodes": [
+                                                {
+                                                    "id": "eap2e12140",
+                                                    "nodes": [
+                                                        {
+                                                            "id": "",
+                                                            "nodes": [],
+                                                            "textData": {
+                                                                "decorations": [],
+                                                                "text": "When mounting the DBC, align the back plate directly over the existing hole. This will ensure the wire is pushed into the wall and not pinched behind the back plate"
+                                                            },
+                                                            "type": "TEXT"
+                                                        }
+                                                    ],
+                                                    "paragraphData": {
+                                                        "textStyle": {
+                                                            "textAlignment": "AUTO"
+                                                        }
+                                                    },
+                                                    "type": "PARAGRAPH"
+                                                }
+                                            ],
+                                            "type": "LIST_ITEM"
+                                        },
+                                        {
+                                            "id": "i5zco12159",
+                                            "nodes": [
+                                                {
+                                                    "id": "rm58r12142",
+                                                    "nodes": [
+                                                        {
+                                                            "id": "",
+                                                            "nodes": [],
+                                                            "textData": {
+                                                                "decorations": [],
+                                                                "text": "Avoid mounting the DBC on metal surfaces if possible. Metal can block RF signal"
+                                                            },
+                                                            "type": "TEXT"
+                                                        }
+                                                    ],
+                                                    "paragraphData": {
+                                                        "textStyle": {
+                                                            "textAlignment": "AUTO"
+                                                        }
+                                                    },
+                                                    "type": "PARAGRAPH"
+                                                }
+                                            ],
+                                            "type": "LIST_ITEM"
+                                        },
+                                        {
+                                            "id": "pnv0112161",
+                                            "nodes": [
+                                                {
+                                                    "id": "utviy12144",
+                                                    "nodes": [
+                                                        {
+                                                            "id": "",
+                                                            "nodes": [],
+                                                            "textData": {
+                                                                "decorations": [],
+                                                                "text": "Anytime a DBC Pro is swapped the backplate must be swapped also"
+                                                            },
+                                                            "type": "TEXT"
+                                                        }
+                                                    ],
+                                                    "paragraphData": {
+                                                        "textStyle": {
+                                                            "textAlignment": "AUTO"
+                                                        }
+                                                    },
+                                                    "type": "PARAGRAPH"
+                                                }
+                                            ],
+                                            "type": "LIST_ITEM"
+                                        },
+                                        {
+                                            "id": "pvhmv12163",
+                                            "nodes": [
+                                                {
+                                                    "id": "tw5mz12146",
+                                                    "nodes": [
+                                                        {
+                                                            "id": "",
+                                                            "nodes": [],
+                                                            "textData": {
+                                                                "decorations": [],
+                                                                "text": "When pairing cameras, only power up the camera you will be pairing to the system. Wait for that camera to completely come online, then you can power up and pair the next camera"
+                                                            },
+                                                            "type": "TEXT"
+                                                        }
+                                                    ],
+                                                    "paragraphData": {
+                                                        "textStyle": {
+                                                            "textAlignment": "AUTO"
+                                                        }
+                                                    },
+                                                    "type": "PARAGRAPH"
+                                                }
+                                            ],
+                                            "type": "LIST_ITEM"
+                                        }
+                                    ],
+                                    "orderedListData": {
+                                        "indentation": 0
+                                    },
+                                    "type": "ORDERED_LIST"
+                                }
+                            ],
+                            "type": "COLLAPSIBLE_ITEM_BODY"
+                        }
+                    ],
+                    "type": "COLLAPSIBLE_ITEM"
+                },
+                {
+                    "id": "5964p15694",
+                    "nodes": [
+                        {
+                            "id": "hdjlt15695",
+                            "nodes": [
+                                {
+                                    "headingData": {
+                                        "level": 5,
+                                        "textStyle": {
+                                            "textAlignment": "AUTO"
+                                        }
+                                    },
+                                    "id": "raf3j15696",
+                                    "nodes": [
+                                        {
+                                            "id": "",
+                                            "nodes": [],
+                                            "textData": {
+                                                "decorations": [],
+                                                "text": "Camera Requirements "
+                                            },
+                                            "type": "TEXT"
+                                        }
+                                    ],
+                                    "type": "HEADING"
+                                }
+                            ],
+                            "type": "COLLAPSIBLE_ITEM_TITLE"
+                        },
+                        {
+                            "id": "hdw6p16270",
+                            "nodes": [
+                                {
+                                    "id": "aaby816271",
+                                    "nodes": [
+                                        {
+                                            "id": "",
+                                            "nodes": [],
+                                            "textData": {
+                                                "decorations": [
+                                                    {
+                                                        "fontWeightValue": 700,
+                                                        "type": "BOLD"
+                                                    },
+                                                    {
+                                                        "colorData": {
+                                                            "foreground": "#B81206"
+                                                        },
+                                                        "type": "COLOR"
+                                                    }
+                                                ],
+                                                "text": "Requirement:"
+                                            },
+                                            "type": "TEXT"
+                                        },
+                                        {
+                                            "id": "",
+                                            "nodes": [],
+                                            "textData": {
+                                                "decorations": [
+                                                    {
+                                                        "fontWeightValue": 700,
+                                                        "type": "BOLD"
+                                                    }
+                                                ],
+                                                "text": " Smart Hub Panel"
+                                            },
+                                            "type": "TEXT"
+                                        }
+                                    ],
+                                    "paragraphData": {},
+                                    "type": "PARAGRAPH"
+                                },
+                                {
+                                    "bulletedListData": {
+                                        "indentation": 0
+                                    },
+                                    "id": "9om9v17236",
+                                    "nodes": [
+                                        {
+                                            "id": "2r2lj17237",
+                                            "nodes": [
+                                                {
+                                                    "paragraphData": {
+                                                        "textStyle": {
+                                                            "textAlignment": "AUTO"
+                                                        }
+                                                    },
+                                                    "style": {},
+                                                    "id": "vajc016820",
+                                                    "nodes": [
+                                                        {
+                                                            "id": "",
+                                                            "nodes": [],
+                                                            "textData": {
+                                                                "decorations": [
+                                                                    {
+                                                                        "fontWeightValue": 700,
+                                                                        "type": "BOLD"
+                                                                    },
+                                                                    {
+                                                                        "colorData": {
+                                                                            "background": "white",
+                                                                            "foreground": "black"
+                                                                        },
+                                                                        "type": "COLOR"
+                                                                    }
+                                                                ],
+                                                                "text": "When doing a new DBC wire run you will always use a "
+                                                            },
+                                                            "type": "TEXT"
+                                                        },
+                                                        {
+                                                            "id": "",
+                                                            "nodes": [],
+                                                            "textData": {
+                                                                "decorations": [
+                                                                    {
+                                                                        "fontWeightValue": 700,
+                                                                        "type": "BOLD"
+                                                                    }
+                                                                ],
+                                                                "text": "VS-AC5 (24VDC)"
+                                                            },
+                                                            "type": "TEXT"
+                                                        },
+                                                        {
+                                                            "id": "",
+                                                            "nodes": [],
+                                                            "textData": {
+                                                                "decorations": [
+                                                                    {
+                                                                        "fontWeightValue": 700,
+                                                                        "type": "BOLD"
+                                                                    },
+                                                                    {
+                                                                        "colorData": {
+                                                                            "background": "white",
+                                                                            "foreground": "black"
+                                                                        },
+                                                                        "type": "COLOR"
+                                                                    }
+                                                                ],
+                                                                "text": "."
+                                                            },
+                                                            "type": "TEXT"
+                                                        }
+                                                    ],
+                                                    "type": "PARAGRAPH"
+                                                },
+                                                {
+                                                    "bulletedListData": {
+                                                        "indentation": 0
+                                                    },
+                                                    "id": "zo5zj17365",
+                                                    "nodes": [
+                                                        {
+                                                            "id": "jbumr17302",
+                                                            "nodes": [
+                                                                {
+                                                                    "paragraphData": {
+                                                                        "textStyle": {
+                                                                            "textAlignment": "AUTO"
+                                                                        }
+                                                                    },
+                                                                    "style": {},
+                                                                    "id": "ecaui16822",
+                                                                    "nodes": [
+                                                                        {
+                                                                            "id": "",
+                                                                            "nodes": [],
+                                                                            "textData": {
+                                                                                "decorations": [
+                                                                                    {
+                                                                                        "colorData": {
+                                                                                            "background": "white",
+                                                                                            "foreground": "black"
+                                                                                        },
+                                                                                        "type": "COLOR"
+                                                                                    }
+                                                                                ],
+                                                                                "text": "A new wire run is defined as running new 18/2 wire from the DBC location to an outlet inside the house"
+                                                                            },
+                                                                            "type": "TEXT"
+                                                                        }
+                                                                    ],
+                                                                    "type": "PARAGRAPH"
+                                                                }
+                                                            ],
+                                                            "type": "LIST_ITEM"
+                                                        },
+                                                        {
+                                                            "id": "ca54f3210",
+                                                            "nodes": [
+                                                                {
+                                                                    "id": "rdrwh3452",
+                                                                    "nodes": [
+                                                                        {
+                                                                            "id": "",
+                                                                            "nodes": [],
+                                                                            "textData": {
+                                                                                "decorations": [],
+                                                                                "text": "If the customers existing wiring is being utilized in any way when adding a transformer you will use the VS-AC5 (24VDC)."
+                                                                            },
+                                                                            "type": "TEXT"
+                                                                        }
+                                                                    ],
+                                                                    "paragraphData": {},
+                                                                    "type": "PARAGRAPH"
+                                                                },
+                                                                {
+                                                                    "bulletedListData": {
+                                                                        "indentation": 0
+                                                                    },
+                                                                    "id": "59cex3916",
+                                                                    "nodes": [
+                                                                        {
+                                                                            "id": "9bmsq3824",
+                                                                            "nodes": [
+                                                                                {
+                                                                                    "id": "zugh54418",
+                                                                                    "nodes": [
+                                                                                        {
+                                                                                            "id": "",
+                                                                                            "nodes": [],
+                                                                                            "textData": {
+                                                                                                "decorations": [],
+                                                                                                "text": "If VS-AC5 is not available, use the TAKE transformer."
+                                                                                            },
+                                                                                            "type": "TEXT"
+                                                                                        }
+                                                                                    ],
+                                                                                    "paragraphData": {},
+                                                                                    "type": "PARAGRAPH"
+                                                                                }
+                                                                            ],
+                                                                            "type": "LIST_ITEM"
+                                                                        }
+                                                                    ],
+                                                                    "type": "BULLETED_LIST"
+                                                                }
+                                                            ],
+                                                            "type": "LIST_ITEM"
+                                                        }
+                                                    ],
+                                                    "type": "BULLETED_LIST"
+                                                }
+                                            ],
+                                            "type": "LIST_ITEM"
+                                        },
+                                        {
+                                            "id": "lmolq18070",
+                                            "nodes": [
+                                                {
+                                                    "paragraphData": {
+                                                        "textStyle": {
+                                                            "textAlignment": "AUTO"
+                                                        }
+                                                    },
+                                                    "style": {},
+                                                    "id": "jdg8a16828",
+                                                    "nodes": [
+                                                        {
+                                                            "id": "",
+                                                            "nodes": [],
+                                                            "textData": {
+                                                                "decorations": [
+                                                                    {
+                                                                        "fontWeightValue": 700,
+                                                                        "type": "BOLD"
+                                                                    },
+                                                                    {
+                                                                        "colorData": {
+                                                                            "background": "white",
+                                                                            "foreground": "black"
+                                                                        },
+                                                                        "type": "COLOR"
+                                                                    }
+                                                                ],
+                                                                "text": "Required Voltage"
+                                                            },
+                                                            "type": "TEXT"
+                                                        },
+                                                        {
+                                                            "id": "",
+                                                            "nodes": [],
+                                                            "textData": {
+                                                                "decorations": [
+                                                                    {
+                                                                        "colorData": {
+                                                                            "background": "white",
+                                                                            "foreground": "black"
+                                                                        },
+                                                                        "type": "COLOR"
+                                                                    }
+                                                                ],
+                                                                "text": ":"
+                                                            },
+                                                            "type": "TEXT"
+                                                        }
+                                                    ],
+                                                    "type": "PARAGRAPH"
+                                                },
+                                                {
+                                                    "bulletedListData": {
+                                                        "indentation": 0
+                                                    },
+                                                    "id": "3qa3o18201",
+                                                    "nodes": [
+                                                        {
+                                                            "id": "4gjfy18136",
+                                                            "nodes": [
+                                                                {
+                                                                    "paragraphData": {
+                                                                        "textStyle": {
+                                                                            "textAlignment": "AUTO"
+                                                                        }
+                                                                    },
+                                                                    "style": {},
+                                                                    "id": "lcz0m16831",
+                                                                    "nodes": [
+                                                                        {
+                                                                            "id": "",
+                                                                            "nodes": [],
+                                                                            "textData": {
+                                                                                "decorations": [
+                                                                                    {
+                                                                                        "colorData": {
+                                                                                            "background": "white",
+                                                                                            "foreground": "black"
+                                                                                        },
+                                                                                        "type": "COLOR"
+                                                                                    }
+                                                                                ],
+                                                                                "text": "14VAC-24VAC 1.0A min"
+                                                                            },
+                                                                            "type": "TEXT"
+                                                                        }
+                                                                    ],
+                                                                    "type": "PARAGRAPH"
+                                                                }
+                                                            ],
+                                                            "type": "LIST_ITEM"
+                                                        },
+                                                        {
+                                                            "id": "dcgcn18138",
+                                                            "nodes": [
+                                                                {
+                                                                    "paragraphData": {
+                                                                        "textStyle": {
+                                                                            "textAlignment": "AUTO"
+                                                                        }
+                                                                    },
+                                                                    "style": {},
+                                                                    "id": "wmpzv16834",
+                                                                    "nodes": [
+                                                                        {
+                                                                            "id": "",
+                                                                            "nodes": [],
+                                                                            "textData": {
+                                                                                "decorations": [
+                                                                                    {
+                                                                                        "colorData": {
+                                                                                            "background": "white",
+                                                                                            "foreground": "black"
+                                                                                        },
+                                                                                        "type": "COLOR"
+                                                                                    }
+                                                                                ],
+                                                                                "text": "12VDC-24VDC 1.0A min"
+                                                                            },
+                                                                            "type": "TEXT"
+                                                                        }
+                                                                    ],
+                                                                    "type": "PARAGRAPH"
+                                                                }
+                                                            ],
+                                                            "type": "LIST_ITEM"
+                                                        },
+                                                        {
+                                                            "id": "x7n9618326",
+                                                            "nodes": [
+                                                                {
+                                                                    "paragraphData": {
+                                                                        "textStyle": {
+                                                                            "textAlignment": "AUTO"
+                                                                        }
+                                                                    },
+                                                                    "style": {},
+                                                                    "id": "otw9m16837",
+                                                                    "nodes": [
+                                                                        {
+                                                                            "id": "",
+                                                                            "nodes": [],
+                                                                            "textData": {
+                                                                                "decorations": [
+                                                                                    {
+                                                                                        "colorData": {
+                                                                                            "background": "white",
+                                                                                            "foreground": "black"
+                                                                                        },
+                                                                                        "type": "COLOR"
+                                                                                    }
+                                                                                ],
+                                                                                "text": "Load Test Info:"
+                                                                            },
+                                                                            "type": "TEXT"
+                                                                        }
+                                                                    ],
+                                                                    "type": "PARAGRAPH"
+                                                                },
+                                                                {
+                                                                    "bulletedListData": {
+                                                                        "indentation": 0
+                                                                    },
+                                                                    "id": "q2f8818882",
+                                                                    "nodes": [
+                                                                        {
+                                                                            "id": "ly8yp18761",
+                                                                            "nodes": [
+                                                                                {
+                                                                                    "paragraphData": {
+                                                                                        "textStyle": {
+                                                                                            "textAlignment": "AUTO"
+                                                                                        }
+                                                                                    },
+                                                                                    "style": {},
+                                                                                    "id": "xqlwg16840",
+                                                                                    "nodes": [
+                                                                                        {
+                                                                                            "id": "",
+                                                                                            "nodes": [],
+                                                                                            "textData": {
+                                                                                                "decorations": [
+                                                                                                    {
+                                                                                                        "colorData": {
+                                                                                                            "background": "white",
+                                                                                                            "foreground": "black"
+                                                                                                        },
+                                                                                                        "type": "COLOR"
+                                                                                                    }
+                                                                                                ],
+                                                                                                "text": "When network diagnostics is ran it will run a load test on the DBC Pro. This test will ensure the DBC Pro meets the voltage requirements"
+                                                                                            },
+                                                                                            "type": "TEXT"
+                                                                                        }
+                                                                                    ],
+                                                                                    "type": "PARAGRAPH"
+                                                                                }
+                                                                            ],
+                                                                            "type": "LIST_ITEM"
+                                                                        },
+                                                                        {
+                                                                            "id": "z67n319123",
+                                                                            "nodes": [
+                                                                                {
+                                                                                    "paragraphData": {
+                                                                                        "textStyle": {
+                                                                                            "textAlignment": "AUTO"
+                                                                                        }
+                                                                                    },
+                                                                                    "style": {},
+                                                                                    "id": "3zx7o16843",
+                                                                                    "nodes": [
+                                                                                        {
+                                                                                            "id": "",
+                                                                                            "nodes": [],
+                                                                                            "textData": {
+                                                                                                "decorations": [
+                                                                                                    {
+                                                                                                        "colorData": {
+                                                                                                            "background": "white",
+                                                                                                            "foreground": "black"
+                                                                                                        },
+                                                                                                        "type": "COLOR"
+                                                                                                    }
+                                                                                                ],
+                                                                                                "text": "If the voltage is good then you will pass network diagnostics"
+                                                                                            },
+                                                                                            "type": "TEXT"
+                                                                                        }
+                                                                                    ],
+                                                                                    "type": "PARAGRAPH"
+                                                                                }
+                                                                            ],
+                                                                            "type": "LIST_ITEM"
+                                                                        },
+                                                                        {
+                                                                            "id": "x1rdv19478",
+                                                                            "nodes": [
+                                                                                {
+                                                                                    "paragraphData": {
+                                                                                        "textStyle": {
+                                                                                            "textAlignment": "AUTO"
+                                                                                        }
+                                                                                    },
+                                                                                    "style": {},
+                                                                                    "id": "q5faj16846",
+                                                                                    "nodes": [
+                                                                                        {
+                                                                                            "id": "",
+                                                                                            "nodes": [],
+                                                                                            "textData": {
+                                                                                                "decorations": [
+                                                                                                    {
+                                                                                                        "colorData": {
+                                                                                                            "background": "white",
+                                                                                                            "foreground": "black"
+                                                                                                        },
+                                                                                                        "type": "COLOR"
+                                                                                                    }
+                                                                                                ],
+                                                                                                "text": "If the voltage does not meet requirements when network diagnostics is ran the first time it will time out and send a reboot to the DBC Pro Network diagnostics will need to be ran a second time."
+                                                                                            },
+                                                                                            "type": "TEXT"
+                                                                                        }
+                                                                                    ],
+                                                                                    "type": "PARAGRAPH"
+                                                                                },
+                                                                                {
+                                                                                    "id": "m390o19803",
+                                                                                    "imageData": {
+                                                                                        "containerData": {
+                                                                                            "alignment": "LEFT",
+                                                                                            "textWrap": false,
+                                                                                            "width": {
+                                                                                                "size": "SMALL"
+                                                                                            }
+                                                                                        },
+                                                                                        "image": {
+                                                                                            "height": 650,
+                                                                                            "src": {
+                                                                                                "id": "affd43_758a7ab3c6384e8c9a7b2e4a6e784cb5~mv2.png"
+                                                                                            },
+                                                                                            "width": 1072
+                                                                                        }
+                                                                                    },
+                                                                                    "nodes": [],
+                                                                                    "type": "IMAGE"
+                                                                                }
+                                                                            ],
+                                                                            "type": "LIST_ITEM"
+                                                                        },
+                                                                        {
+                                                                            "id": "m4ttw20426",
+                                                                            "nodes": [
+                                                                                {
+                                                                                    "paragraphData": {
+                                                                                        "textStyle": {
+                                                                                            "textAlignment": "AUTO"
+                                                                                        }
+                                                                                    },
+                                                                                    "style": {},
+                                                                                    "id": "x72rb16851",
+                                                                                    "nodes": [
+                                                                                        {
+                                                                                            "id": "",
+                                                                                            "nodes": [],
+                                                                                            "textData": {
+                                                                                                "decorations": [
+                                                                                                    {
+                                                                                                        "colorData": {
+                                                                                                            "background": "white",
+                                                                                                            "foreground": "black"
+                                                                                                        },
+                                                                                                        "type": "COLOR"
+                                                                                                    }
+                                                                                                ],
+                                                                                                "text": "After the proper corrective action has been taken to get the voltage between 12-24VDC or 14-24VAC, network diagnostics will need to be ran a third time to pass"
+                                                                                            },
+                                                                                            "type": "TEXT"
+                                                                                        }
+                                                                                    ],
+                                                                                    "type": "PARAGRAPH"
+                                                                                }
+                                                                            ],
+                                                                            "type": "LIST_ITEM"
+                                                                        },
+                                                                        {
+                                                                            "id": "n4fqm20819",
+                                                                            "nodes": [
+                                                                                {
+                                                                                    "paragraphData": {
+                                                                                        "textStyle": {
+                                                                                            "textAlignment": "AUTO"
+                                                                                        }
+                                                                                    },
+                                                                                    "style": {},
+                                                                                    "id": "crirt16854",
+                                                                                    "nodes": [
+                                                                                        {
+                                                                                            "id": "",
+                                                                                            "nodes": [],
+                                                                                            "textData": {
+                                                                                                "decorations": [
+                                                                                                    {
+                                                                                                        "colorData": {
+                                                                                                            "background": "white",
+                                                                                                            "foreground": "black"
+                                                                                                        },
+                                                                                                        "type": "COLOR"
+                                                                                                    }
+                                                                                                ],
+                                                                                                "text": "Pro Tip: Use your multi meter to test voltage prior to installation. This will save you having to run network diagnostics multiple times"
+                                                                                            },
+                                                                                            "type": "TEXT"
+                                                                                        }
+                                                                                    ],
+                                                                                    "type": "PARAGRAPH"
+                                                                                }
+                                                                            ],
+                                                                            "type": "LIST_ITEM"
+                                                                        }
+                                                                    ],
+                                                                    "type": "BULLETED_LIST"
+                                                                }
+                                                            ],
+                                                            "type": "LIST_ITEM"
+                                                        },
+                                                        {
+                                                            "id": "y6sid21156",
+                                                            "nodes": [
+                                                                {
+                                                                    "paragraphData": {
+                                                                        "textStyle": {
+                                                                            "textAlignment": "AUTO"
+                                                                        }
+                                                                    },
+                                                                    "style": {},
+                                                                    "id": "u67om16857",
+                                                                    "nodes": [
+                                                                        {
+                                                                            "id": "",
+                                                                            "nodes": [],
+                                                                            "textData": {
+                                                                                "decorations": [],
+                                                                                "text": "See \"Additional Doorbell Transformation Information\" for more information. "
+                                                                            },
+                                                                            "type": "TEXT"
+                                                                        }
+                                                                    ],
+                                                                    "type": "PARAGRAPH"
+                                                                }
+                                                            ],
+                                                            "type": "LIST_ITEM"
+                                                        }
+                                                    ],
+                                                    "type": "BULLETED_LIST"
+                                                }
+                                            ],
+                                            "type": "LIST_ITEM"
+                                        },
+                                        {
+                                            "id": "h8h9m27094",
+                                            "nodes": [
+                                                {
+                                                    "paragraphData": {
+                                                        "textStyle": {
+                                                            "textAlignment": "AUTO"
+                                                        }
+                                                    },
+                                                    "style": {},
+                                                    "id": "kfvo016860",
+                                                    "nodes": [
+                                                        {
+                                                            "id": "",
+                                                            "nodes": [],
+                                                            "textData": {
+                                                                "decorations": [
+                                                                    {
+                                                                        "fontWeightValue": 700,
+                                                                        "type": "BOLD"
+                                                                    },
+                                                                    {
+                                                                        "colorData": {
+                                                                            "background": "white",
+                                                                            "foreground": "black"
+                                                                        },
+                                                                        "type": "COLOR"
+                                                                    }
+                                                                ],
+                                                                "text": "Required minimum upload speed"
+                                                            },
+                                                            "type": "TEXT"
+                                                        },
+                                                        {
+                                                            "id": "",
+                                                            "nodes": [],
+                                                            "textData": {
+                                                                "decorations": [
+                                                                    {
+                                                                        "colorData": {
+                                                                            "background": "white",
+                                                                            "foreground": "black"
+                                                                        },
+                                                                        "type": "COLOR"
+                                                                    }
+                                                                ],
+                                                                "text": ":"
+                                                            },
+                                                            "type": "TEXT"
+                                                        }
+                                                    ],
+                                                    "type": "PARAGRAPH"
+                                                },
+                                                {
+                                                    "bulletedListData": {
+                                                        "indentation": 0
+                                                    },
+                                                    "id": "k7dtf27424",
+                                                    "nodes": [
+                                                        {
+                                                            "id": "vwgbu27316",
+                                                            "nodes": [
+                                                                {
+                                                                    "paragraphData": {
+                                                                        "textStyle": {
+                                                                            "textAlignment": "AUTO"
+                                                                        }
+                                                                    },
+                                                                    "style": {},
+                                                                    "id": "12lir16863",
+                                                                    "nodes": [
+                                                                        {
+                                                                            "id": "",
+                                                                            "nodes": [],
+                                                                            "textData": {
+                                                                                "decorations": [
+                                                                                    {
+                                                                                        "colorData": {
+                                                                                            "background": "white",
+                                                                                            "foreground": "black"
+                                                                                        },
+                                                                                        "type": "COLOR"
+                                                                                    }
+                                                                                ],
+                                                                                "text": "1 Mbps upload and download minimum for Cameras and Panel only."
+                                                                            },
+                                                                            "type": "TEXT"
+                                                                        }
+                                                                    ],
+                                                                    "type": "PARAGRAPH"
+                                                                }
+                                                            ],
+                                                            "type": "LIST_ITEM"
+                                                        },
+                                                        {
+                                                            "id": "6ywr927318",
+                                                            "nodes": [
+                                                                {
+                                                                    "paragraphData": {
+                                                                        "textStyle": {
+                                                                            "textAlignment": "AUTO"
+                                                                        }
+                                                                    },
+                                                                    "style": {},
+                                                                    "id": "nl06316866",
+                                                                    "nodes": [
+                                                                        {
+                                                                            "id": "",
+                                                                            "nodes": [],
+                                                                            "textData": {
+                                                                                "decorations": [
+                                                                                    {
+                                                                                        "colorData": {
+                                                                                            "background": "white",
+                                                                                            "foreground": "black"
+                                                                                        },
+                                                                                        "type": "COLOR"
+                                                                                    }
+                                                                                ],
+                                                                                "text": "2 Mbps upload and download minimum for SMART DRIVE, Cameras, and Panel."
+                                                                            },
+                                                                            "type": "TEXT"
+                                                                        }
+                                                                    ],
+                                                                    "type": "PARAGRAPH"
+                                                                }
+                                                            ],
+                                                            "type": "LIST_ITEM"
+                                                        }
+                                                    ],
+                                                    "type": "BULLETED_LIST"
+                                                }
+                                            ],
+                                            "type": "LIST_ITEM"
+                                        },
+                                        {
+                                            "id": "vb48r27583",
+                                            "nodes": [
+                                                {
+                                                    "paragraphData": {
+                                                        "textStyle": {
+                                                            "textAlignment": "AUTO"
+                                                        }
+                                                    },
+                                                    "style": {},
+                                                    "id": "kk63q16869",
+                                                    "nodes": [
+                                                        {
+                                                            "id": "",
+                                                            "nodes": [],
+                                                            "textData": {
+                                                                "decorations": [
+                                                                    {
+                                                                        "fontWeightValue": 700,
+                                                                        "type": "BOLD"
+                                                                    },
+                                                                    {
+                                                                        "colorData": {
+                                                                            "background": "white",
+                                                                            "foreground": "black"
+                                                                        },
+                                                                        "type": "COLOR"
+                                                                    }
+                                                                ],
+                                                                "text": "NON-Compatible"
+                                                            },
+                                                            "type": "TEXT"
+                                                        },
+                                                        {
+                                                            "id": "",
+                                                            "nodes": [],
+                                                            "textData": {
+                                                                "decorations": [
+                                                                    {
+                                                                        "colorData": {
+                                                                            "background": "white",
+                                                                            "foreground": "black"
+                                                                        },
+                                                                        "type": "COLOR"
+                                                                    }
+                                                                ],
+                                                                "text": ":                                  "
+                                                            },
+                                                            "type": "TEXT"
+                                                        }
+                                                    ],
+                                                    "type": "PARAGRAPH"
+                                                },
+                                                {
+                                                    "bulletedListData": {
+                                                        "indentation": 0
+                                                    },
+                                                    "id": "rs3ld27803",
+                                                    "nodes": [
+                                                        {
+                                                            "id": "q95tn27692",
+                                                            "nodes": [
+                                                                {
+                                                                    "paragraphData": {
+                                                                        "textStyle": {
+                                                                            "textAlignment": "AUTO"
+                                                                        }
+                                                                    },
+                                                                    "style": {},
+                                                                    "id": "tqpdn16872",
+                                                                    "nodes": [
+                                                                        {
+                                                                            "id": "",
+                                                                            "nodes": [],
+                                                                            "textData": {
+                                                                                "decorations": [
+                                                                                    {
+                                                                                        "colorData": {
+                                                                                            "background": "white",
+                                                                                            "foreground": "black"
+                                                                                        },
+                                                                                        "type": "COLOR"
+                                                                                    }
+                                                                                ],
+                                                                                "text": "SkyControl"
+                                                                            },
+                                                                            "type": "TEXT"
+                                                                        }
+                                                                    ],
+                                                                    "type": "PARAGRAPH"
+                                                                }
+                                                            ],
+                                                            "type": "LIST_ITEM"
+                                                        },
+                                                        {
+                                                            "id": "oi8cj27695",
+                                                            "nodes": [
+                                                                {
+                                                                    "paragraphData": {
+                                                                        "textStyle": {
+                                                                            "textAlignment": "AUTO"
+                                                                        }
+                                                                    },
+                                                                    "style": {},
+                                                                    "id": "w67zg16875",
+                                                                    "nodes": [
+                                                                        {
+                                                                            "id": "",
+                                                                            "nodes": [],
+                                                                            "textData": {
+                                                                                "decorations": [
+                                                                                    {
+                                                                                        "colorData": {
+                                                                                            "background": "white",
+                                                                                            "foreground": "black"
+                                                                                        },
+                                                                                        "type": "COLOR"
+                                                                                    }
+                                                                                ],
+                                                                                "text": "V1 Space Monkey"
+                                                                            },
+                                                                            "type": "TEXT"
+                                                                        }
+                                                                    ],
+                                                                    "type": "PARAGRAPH"
+                                                                }
+                                                            ],
+                                                            "type": "LIST_ITEM"
+                                                        },
+                                                        {
+                                                            "id": "ky2zm27698",
+                                                            "nodes": [
+                                                                {
+                                                                    "paragraphData": {
+                                                                        "textStyle": {
+                                                                            "textAlignment": "AUTO"
+                                                                        }
+                                                                    },
+                                                                    "style": {},
+                                                                    "id": "46sur16878",
+                                                                    "nodes": [
+                                                                        {
+                                                                            "id": "",
+                                                                            "nodes": [],
+                                                                            "textData": {
+                                                                                "decorations": [
+                                                                                    {
+                                                                                        "colorData": {
+                                                                                            "background": "white",
+                                                                                            "foreground": "black"
+                                                                                        },
+                                                                                        "type": "COLOR"
+                                                                                    }
+                                                                                ],
+                                                                                "text": "Web App"
+                                                                            },
+                                                                            "type": "TEXT"
+                                                                        }
+                                                                    ],
+                                                                    "type": "PARAGRAPH"
+                                                                }
+                                                            ],
+                                                            "type": "LIST_ITEM"
+                                                        },
+                                                        {
+                                                            "id": "hpda227701",
+                                                            "nodes": [
+                                                                {
+                                                                    "paragraphData": {
+                                                                        "textStyle": {
+                                                                            "textAlignment": "AUTO"
+                                                                        }
+                                                                    },
+                                                                    "style": {},
+                                                                    "id": "ba9ra16881",
+                                                                    "nodes": [
+                                                                        {
+                                                                            "id": "",
+                                                                            "nodes": [],
+                                                                            "textData": {
+                                                                                "decorations": [
+                                                                                    {
+                                                                                        "colorData": {
+                                                                                            "background": "white",
+                                                                                            "foreground": "black"
+                                                                                        },
+                                                                                        "type": "COLOR"
+                                                                                    }
+                                                                                ],
+                                                                                "text": "DAP1320"
+                                                                            },
+                                                                            "type": "TEXT"
+                                                                        }
+                                                                    ],
+                                                                    "type": "PARAGRAPH"
+                                                                }
+                                                            ],
+                                                            "type": "LIST_ITEM"
+                                                        },
+                                                        {
+                                                            "id": "ux96j27704",
+                                                            "nodes": [
+                                                                {
+                                                                    "paragraphData": {
+                                                                        "textStyle": {
+                                                                            "textAlignment": "AUTO"
+                                                                        }
+                                                                    },
+                                                                    "style": {},
+                                                                    "id": "zby2616884",
+                                                                    "nodes": [
+                                                                        {
+                                                                            "id": "",
+                                                                            "nodes": [],
+                                                                            "textData": {
+                                                                                "decorations": [
+                                                                                    {
+                                                                                        "colorData": {
+                                                                                            "background": "white",
+                                                                                            "foreground": "black"
+                                                                                        },
+                                                                                        "type": "COLOR"
+                                                                                    }
+                                                                                ],
+                                                                                "text": "The video feed for Pro cameras is not compatible with the Amazon Echo Show or Google Home/Nest Hub"
+                                                                            },
+                                                                            "type": "TEXT"
+                                                                        }
+                                                                    ],
+                                                                    "type": "PARAGRAPH"
+                                                                }
+                                                            ],
+                                                            "type": "LIST_ITEM"
+                                                        }
+                                                    ],
+                                                    "type": "BULLETED_LIST"
+                                                }
+                                            ],
+                                            "type": "LIST_ITEM"
+                                        },
+                                        
+                                    ],
+                                    "type": "BULLETED_LIST"
+                                }
+                            ],
+                            "type": "COLLAPSIBLE_ITEM_BODY"
+                        }
+                    ],
+                    "type": "COLLAPSIBLE_ITEM"
+                },
+                
+            ],
+            "type": "COLLAPSIBLE_LIST"
+        }
+    ]
+}
